@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Text;
 using System.Text.RegularExpressions;
 
@@ -99,7 +100,7 @@ namespace Exceltk.Util {
         public override string ToString() {
             var sb=new StringBuilder();
             foreach (var p in Parameters) {
-                sb.AppendFormat("{0}:{1}\r\n", p.Key, p.Value);
+                sb.AppendFormat("{0}:{1}" + Environment.NewLine, p.Key, p.Value);
             }
 
             return sb.ToString();

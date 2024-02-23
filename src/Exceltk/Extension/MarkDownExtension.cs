@@ -67,13 +67,13 @@ namespace Exceltk{
                         foreach (DataColumn col in table.Columns) {
                             sb.Append("|");
                         }
-                        sb.Append("\r\n");
+                        sb.Append(Environment.NewLine);
 
                         sb.Append("|");
                         foreach (DataColumn col in table.Columns) {
                             sb.Append(Config.TableAliginFormat).Append("|");
                         }
-                        sb.Append("\r\n");
+                        sb.Append(Environment.NewLine);
                     }
                 }
 
@@ -87,7 +87,7 @@ namespace Exceltk{
                     }
                 }
 
-                sb.Append("\r\n");
+                sb.Append(Environment.NewLine);
 
                 if (!Config.BodyHead) {
                     if (i == 0 && insertHeader) {
@@ -95,7 +95,7 @@ namespace Exceltk{
                         foreach (DataColumn col in table.Columns) {
                             sb.Append(Config.TableAliginFormat).Append("|");
                         }
-                        sb.Append("\r\n");
+                        sb.Append(Environment.NewLine);
                     }
                 }
 
