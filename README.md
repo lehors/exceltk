@@ -65,12 +65,12 @@ ExcelTk integrated the following projects
 4. the `dotnet restore`, this will take long time to install nupack files for publish target runtime, you can comment the following config in `src/Exceltk/Exceltk.csproj` to ignore it.
 ```
   <PropertyGroup>
-    <RuntimeIdentifiers>win-x86;osx.10.10-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x86;osx-x64</RuntimeIdentifiers>
   </PropertyGroup>
 ```
 5. run the following script to publish 
 ```
-dotnet publish -r osx.10.10-x64 src/exceltk.sln -c Release
+dotnet publish -r osx-x64 src/exceltk.sln -c Release
 ```
 
 ## Build on Windows
@@ -87,7 +87,7 @@ dotnet publish -r win-x86 src/exceltk.sln -c Release
 3. append the `ubuntu-x64` to following RuntimeIdentifiers in `src/Exceltk/Exceltk.csproj`. you can find other RuntimeIdentifiers at: https://docs.microsoft.com/en-us/dotnet/core/rid-catalog
 ```
   <PropertyGroup>
-    <RuntimeIdentifiers>win-x86;osx.10.10-x64;ubuntu-x64</RuntimeIdentifiers>
+    <RuntimeIdentifiers>win-x86;osx-x64;ubuntu-x64</RuntimeIdentifiers>
   </PropertyGroup>
 ```
 4. run the following script step by step.

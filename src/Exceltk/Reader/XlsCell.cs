@@ -106,7 +106,7 @@ namespace Exceltk.Reader {
             }
         }
 
-        public void SetHyperLink(string url){
+        public void SetHyperLink(string url, string location = null){
             url = FilteUrl(url);
 
             m_isHyperLink=true;
@@ -127,6 +127,9 @@ namespace Exceltk.Reader {
                     }
                 }
             }else{
+                if (location != null) {
+                    url += "#" + location;
+                }
                 var text=m_object.ToString();
                 var regex = string.Format(@"\[.*\]\({0}\)",url);
                 var m = Regex.Match(text,regex);
