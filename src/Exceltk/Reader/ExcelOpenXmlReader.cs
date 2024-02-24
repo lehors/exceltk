@@ -492,6 +492,7 @@ namespace Exceltk.Reader {
                 string aref = m_xmlReader.GetAttribute(XlsxWorksheet.A_ref);
                 string display = m_xmlReader.GetAttribute(XlsxWorksheet.A_display);
                 string rid = m_xmlReader.GetAttribute(XlsxWorksheet.A_rid);
+                string location = m_xmlReader.GetAttribute("location"); // fragment identifier
                 string hyperlink = display;
 
 
@@ -514,7 +515,7 @@ namespace Exceltk.Reader {
                                 cell = new XlsCell(value);
                             }
                             //Console.WriteLine("H:{0}", hyperlink);
-                            cell.SetHyperLink(hyperlink);
+                            cell.SetHyperLink(hyperlink, location);
                             table.Rows[row][col] = cell;
                         }
                     }
